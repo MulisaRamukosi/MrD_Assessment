@@ -1,0 +1,55 @@
+{
+  "restaurant_id": "r-1004",
+  "categories": [
+    {
+      "id": "c-1004-1",
+      "name": "Gourmet Burgers",
+      "items": [
+        {
+          "id": "i-1004-10",
+          "name": "The Jozi Smash Burger",
+          "price_cents": 11900,
+          "available": true,
+          "description": "Double smashed beef patty, cheddar, caramelized onions, house pickle relish",
+          "image_url": "https://picsum.photos/seed/burger1/300/200",
+          "options": [
+            {
+              "id": "o-1004-1",
+              "name": "Extra Patty",
+              "price_cents": 3500
+            },
+            {
+              "id": "o-1004-2",
+              "name": "Crispy Bacon",
+              "price_cents": 2000
+            }
+          ]
+        },
+        {
+          "id": "i-1004-11",
+          "name": "Spicy Chicken Jalapeño Burger",
+          "price_cents": 10500,
+          "available": true,
+          "description": "Crispy fried chicken breast, pickled jalapeños, spicy mayo, coleslaw",
+          "image_url": "https://picsum.photos/seed/burger2/300/200",
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "c-1004-2",
+      "name": "Sides & Shakes",
+      "items": [
+        {
+          "id": "i-1004-20",
+          "name": "Hand-Cut Loaded Fries",
+          "price_cents": 4900,
+          "available": true,
+          "description": "Crispy fries topped with melted cheese sauce and chives",
+          "image_url": "https://picsum.photos/seed/fries1/300/200",
+          "options": []
+        }
+      ]
+    }
+  ]
+}

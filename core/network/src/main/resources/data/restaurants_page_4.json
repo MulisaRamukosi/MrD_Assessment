@@ -1,0 +1,206 @@
+{
+  "restaurants": [
+    {
+      "id": "r-4001",
+      "name": "Greenside Pasta Bar",
+      "cuisines": ["Italian", "Pasta"],
+      "rating": 4.6,
+      "delivery_fee_cents": 1400,
+      "eta_minutes": 28,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4001/400/300"
+    },
+    {
+      "id": "r-4002",
+      "name": "Simon's Town Harbour Cafe",
+      "cuisines": ["Seafood", "Cafe"],
+      "rating": 4.4,
+      "delivery_fee_cents": 1600,
+      "eta_minutes": 32,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4002/400/300"
+    },
+    {
+      "id": "r-4003",
+      "name": "Kempton Park Curry House",
+      "cuisines": ["Indian", "Curry"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1100,
+      "eta_minutes": 26,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4003/400/300"
+    },
+    {
+      "id": "r-4004",
+      "name": "Midrand Flame Grill",
+      "cuisines": ["Grill", "Burgers"],
+      "rating": 4.5,
+      "delivery_fee_cents": 1300,
+      "eta_minutes": 30,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r4004/400/300"
+    },
+    {
+      "id": "r-4005",
+      "name": "Oudtshoorn Ostrich Steakhouse",
+      "cuisines": ["Steakhouse", "South African"],
+      "rating": 4.7,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 38,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4005/400/300"
+    },
+    {
+      "id": "r-4006",
+      "name": "Blouberg Kitesurf Cafe",
+      "cuisines": ["Cafe", "Healthy"],
+      "rating": 4.2,
+      "delivery_fee_cents": 1000,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4006/400/300"
+    },
+    {
+      "id": "r-4007",
+      "name": "Linden Ice Cream Parlour",
+      "cuisines": ["Desserts", "Ice Cream"],
+      "rating": 4.9,
+      "delivery_fee_cents": 800,
+      "eta_minutes": 15,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4007/400/300"
+    },
+    {
+      "id": "r-4008",
+      "name": "Somerset West Bistro",
+      "cuisines": ["Bistro", "Continental"],
+      "rating": 4.5,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 33,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4008/400/300"
+    },
+    {
+      "id": "r-4009",
+      "name": "Mouille Point Gelato",
+      "cuisines": ["Desserts", "Italian"],
+      "rating": 4.8,
+      "delivery_fee_cents": 900,
+      "eta_minutes": 18,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4009/400/300"
+    },
+    {
+      "id": "r-4010",
+      "name": "Benoni Kebabs",
+      "cuisines": ["Middle Eastern", "Kebabs"],
+      "rating": 4.1,
+      "delivery_fee_cents": 1000,
+      "eta_minutes": 22,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r4010/400/300"
+    },
+    {
+      "id": "r-4011",
+      "name": "Bedfordview Trattoria",
+      "cuisines": ["Italian", "Pizza"],
+      "rating": 4.6,
+      "delivery_fee_cents": 1700,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4011/400/300"
+    },
+    {
+      "id": "r-4012",
+      "name": "Gordon's Bay Seafood Bar",
+      "cuisines": ["Seafood"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1400,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4012/400/300"
+    },
+    {
+      "id": "r-4013",
+      "name": "Swellendam Country Kitchen",
+      "cuisines": ["South African", "Bakery"],
+      "rating": 4.4,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 27,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4013/400/300"
+    },
+    {
+      "id": "r-4014",
+      "name": "Auckland Park Burrito Bar",
+      "cuisines": ["Mexican", "Fast Food"],
+      "rating": 4.2,
+      "delivery_fee_cents": 1100,
+      "eta_minutes": 21,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4014/400/300"
+    },
+    {
+      "id": "r-4015",
+      "name": "Camps Bay Cocktail & Sushi",
+      "cuisines": ["Sushi", "Japanese"],
+      "rating": 4.7,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 40,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4015/400/300"
+    },
+    {
+      "id": "r-4016",
+      "name": "St James Tidal Bistro",
+      "cuisines": ["Bistro", "Cafe"],
+      "rating": 4.5,
+      "delivery_fee_cents": 1300,
+      "eta_minutes": 25,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r4016/400/300"
+    },
+    {
+      "id": "r-4017",
+      "name": "Randburg Rib House",
+      "cuisines": ["Barbecue", "Grill"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 31,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4017/400/300"
+    },
+    {
+      "id": "r-4018",
+      "name": "Pinelands Bakery",
+      "cuisines": ["Bakery", "Desserts"],
+      "rating": 4.4,
+      "delivery_fee_cents": 900,
+      "eta_minutes": 19,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4018/400/300"
+    },
+    {
+      "id": "r-4019",
+      "name": "Worcester Vineyard Restaurant",
+      "cuisines": ["Continental", "Wine Bar"],
+      "rating": 4.6,
+      "delivery_fee_cents": 1900,
+      "eta_minutes": 41,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4019/400/300"
+    },
+    {
+      "id": "r-4020",
+      "name": "Waterfall City Sushi",
+      "cuisines": ["Sushi", "Japanese"],
+      "rating": 4.8,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 34,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r4020/400/300"
+    }
+  ],
+  "page": 4,
+  "has_more_pages": true
+}

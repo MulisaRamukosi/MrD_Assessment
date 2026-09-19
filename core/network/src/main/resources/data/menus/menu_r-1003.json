@@ -1,0 +1,66 @@
+{
+  "restaurant_id": "r-1003",
+  "categories": [
+    {
+      "id": "c-1003-1",
+      "name": "Fresh Pastries",
+      "items": [
+        {
+          "id": "i-1003-10",
+          "name": "Butter Croissant",
+          "price_cents": 3500,
+          "available": true,
+          "description": "Flaky French butter croissant, freshly baked daily",
+          "image_url": "https://picsum.photos/seed/bakery1/300/200",
+          "options": [
+            {
+              "id": "o-1003-1",
+              "name": "Add Homemade Jam",
+              "price_cents": 800
+            },
+            {
+              "id": "o-1003-2",
+              "name": "Add Cheddar Cheese",
+              "price_cents": 1200
+            }
+          ]
+        },
+        {
+          "id": "i-1003-11",
+          "name": "Almond Pain au Chocolat",
+          "price_cents": 4200,
+          "available": true,
+          "description": "Rich dark chocolate croissant topped with toasted flaked almonds",
+          "image_url": "https://picsum.photos/seed/bakery2/300/200",
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "c-1003-2",
+      "name": "Artisanal Coffee",
+      "items": [
+        {
+          "id": "i-1003-20",
+          "name": "Flat White",
+          "price_cents": 3800,
+          "available": true,
+          "description": "Double shot espresso with silky micro-foamed milk",
+          "image_url": "https://picsum.photos/seed/coffee1/300/200",
+          "options": [
+            {
+              "id": "o-1003-3",
+              "name": "Oat Milk",
+              "price_cents": 900
+            },
+            {
+              "id": "o-1003-4",
+              "name": "Extra Shot Espresso",
+              "price_cents": 800
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "restaurants": [
+    {
+      "id": "r-1001",
+      "name": "Cape Town Grill",
+      "cuisines": ["Steakhouse", "Grill"],
+      "rating": 4.6,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 32,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1001/400/300"
+    },
+    {
+      "id": "r-1002",
+      "name": "Sushi on Sea Point",
+      "cuisines": ["Sushi", "Japanese"],
+      "rating": 4.3,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 25,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r1002/400/300"
+    },
+    {
+      "id": "r-1003",
+      "name": "Stellenbosch Bakery & Cafe",
+      "cuisines": ["Bakery", "Cafe", "Breakfast"],
+      "rating": 4.8,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1003/400/300"
+    },
+    {
+      "id": "r-1004",
+      "name": "Jozi Burger Bar",
+      "cuisines": ["Burgers", "American"],
+      "rating": 4.5,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 40,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1004/400/300"
+    },
+    {
+      "id": "r-1005",
+      "name": "Durban Curry House",
+      "cuisines": ["Indian", "Curry"],
+      "rating": 4.7,
+      "delivery_fee_cents": 1000,
+      "eta_minutes": 30,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1005/400/300"
+    },
+    {
+      "id": "r-1006",
+      "name": "Camps Bay Pizzeria",
+      "cuisines": ["Italian", "Pizza"],
+      "rating": 4.4,
+      "delivery_fee_cents": 2000,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1006/400/300"
+    },
+    {
+      "id": "r-1007",
+      "name": "Waterfront Seafood Shack",
+      "cuisines": ["Seafood", "Grill"],
+      "rating": 4.2,
+      "delivery_fee_cents": 2500,
+      "eta_minutes": 45,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r1007/400/300"
+    },
+    {
+      "id": "r-1008",
+      "name": "Mama Africa Kitchen",
+      "cuisines": ["African", "Traditional"],
+      "rating": 4.9,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 28,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1008/400/300"
+    },
+    {
+      "id": "r-1009",
+      "name": "Table Mountain Tacos",
+      "cuisines": ["Mexican", "Tacos"],
+      "rating": 4.1,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1009/400/300"
+    },
+    {
+      "id": "r-1010",
+      "name": "Bo-Kaap Spice House",
+      "cuisines": ["Cape Malay", "Halal"],
+      "rating": 4.6,
+      "delivery_fee_cents": 0,
+      "eta_minutes": 33,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1010/400/300"
+    },
+    {
+      "id": "r-1011",
+      "name": "Greenpoint Salad Co.",
+      "cuisines": ["Healthy", "Salads"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1000,
+      "eta_minutes": 18,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1011/400/300"
+    },
+    {
+      "id": "r-1012",
+      "name": "The Karoo Lamb",
+      "cuisines": ["South African", "Barbecue"],
+      "rating": 4.7,
+      "delivery_fee_cents": 1700,
+      "eta_minutes": 38,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1012/400/300"
+    },
+    {
+      "id": "r-1013",
+      "name": "Constantia Bistro",
+      "cuisines": ["Bistro", "Continental"],
+      "rating": 4.5,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 42,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r1013/400/300"
+    },
+    {
+      "id": "r-1014",
+      "name": "Woodstock Noodle Bar",
+      "cuisines": ["Asian", "Noodles"],
+      "rating": 4.4,
+      "delivery_fee_cents": 1100,
+      "eta_minutes": 27,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1014/400/300"
+    },
+    {
+      "id": "r-1015",
+      "name": "Muizenberg Fish & Chips",
+      "cuisines": ["Seafood", "Fast Food"],
+      "rating": 4.2,
+      "delivery_fee_cents": 900,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1015/400/300"
+    },
+    {
+      "id": "r-1016",
+      "name": "Franschhoek Fine Dining",
+      "cuisines": ["French", "Gourmet"],
+      "rating": 4.9,
+      "delivery_fee_cents": 3000,
+      "eta_minutes": 50,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1016/400/300"
+    },
+    {
+      "id": "r-1017",
+      "name": "Bree Street Tapas",
+      "cuisines": ["Spanish", "Tapas"],
+      "rating": 4.6,
+      "delivery_fee_cents": 1600,
+      "eta_minutes": 31,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1017/400/300"
+    },
+    {
+      "id": "r-1018",
+      "name": "Kirstenbosch Tea Garden",
+      "cuisines": ["Cafe", "Desserts"],
+      "rating": 4.4,
+      "delivery_fee_cents": 1300,
+      "eta_minutes": 25,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1018/400/300"
+    },
+    {
+      "id": "r-1019",
+      "name": "Kalk Bay Lobster Shack",
+      "cuisines": ["Seafood", "Grill"],
+      "rating": 4.8,
+      "delivery_fee_cents": 2100,
+      "eta_minutes": 36,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r1019/400/300"
+    },
+    {
+      "id": "r-1020",
+      "name": "Rondebosch Diner",
+      "cuisines": ["American", "Breakfast"],
+      "rating": 4.1,
+      "delivery_fee_cents": 1000,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r1020/400/300"
+    }
+  ],
+  "page": 1,
+  "has_more_pages": true
+}

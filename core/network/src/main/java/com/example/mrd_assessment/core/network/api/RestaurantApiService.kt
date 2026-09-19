@@ -1,22 +1,38 @@
 package com.example.mrd_assessment.core.network.api
 
-import com.example.mrd_assessment.model.Menu
 import com.example.mrd_assessment.model.Restaurant
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.Path
+import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface RestaurantApiService {
 
-    @GET("restaurants")
-    suspend fun getRestaurants(): List<Restaurant>
+    @GET("v1/restaurants")
+    suspend fun getRestaurants(
+        @Body request: GetRestaurantRequest
+    ): Response<GetRestaurantResponse>
 
-    @GET("restaurants/{id}")
-    suspend fun getRestaurantDetail(
-        @Path("id") id: String
-    ): Restaurant
 
-    @GET("restaurants/{id}/menu")
-    suspend fun getMenu(
-        @Path("id") restaurantId: String
-    ): Menu
+    @POST("v1/restaurants/{id}/favourite")
+    suspend fun markRestaurantAsFavourite(@Query("id") restaurantId: String): Response<Boolean>
 }
+
+@Serializable
+data class GetRestaurantRequest(
+    @SerialName("page")
+    val page: Int
+)
+
+@Serializable
+data class GetRestaurantResponse(
+    @SerialName("restaurants")
+    val restaurants: List<Restaurant>,
+    @SerialName("page")
+    val page: Int,
+    @SerialName("has_more_pages")
+    val hasMorePages: Boolean,
+)

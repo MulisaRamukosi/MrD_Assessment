@@ -1,0 +1,61 @@
+{
+  "restaurant_id": "r-1002",
+  "categories": [
+    {
+      "id": "c-100",
+      "name": "Sushi Rolls",
+      "items": [
+        {
+          "id": "i-1002-1",
+          "name": "Salmon Salmon California Roll (8pcs)",
+          "price_cents": 11000,
+          "available": true,
+          "description": "Fresh Atlantic salmon, avocado, cucumber, sesame seeds",
+          "image_url": "https://picsum.photos/seed/sushi1/300/200",
+          "options": [
+            {
+              "id": "o-100",
+              "name": "Extra Wasabi",
+              "price_cents": 500
+            },
+            {
+              "id": "o-101",
+              "name": "Sriracha Mayo",
+              "price_cents": 800
+            }
+          ]
+        },
+        {
+          "id": "i-1002-2",
+          "name": "Tuna Crunch Roll (8pcs)",
+          "price_cents": 12500,
+          "available": true,
+          "description": "Spicy tuna, tempura flakes, sweet soy glaze",
+          "image_url": "https://picsum.photos/seed/sushi2/300/200",
+          "options": [
+            {
+              "id": "o-102",
+              "name": "Pickled Ginger",
+              "price_cents": 400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c-200",
+      "name": "Sashimi & Nigiri",
+      "items": [
+        {
+          "id": "i-1002-3",
+          "name": "Salmon Sashimi (5pcs)",
+          "price_cents": 14000,
+          "available": true,
+          "description": "Thinly sliced raw Atlantic salmon",
+          "image_url": "https://picsum.photos/seed/sushi3/300/200",
+          "options": []
+        }
+      ]
+    }
+  ]
+}

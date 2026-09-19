@@ -1,0 +1,206 @@
+{
+  "restaurants": [
+    {
+      "id": "r-2001",
+      "name": "Soweto Soul Food",
+      "cuisines": ["African", "Soul Food"],
+      "rating": 4.7,
+      "delivery_fee_cents": 1400,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2001/400/300"
+    },
+    {
+      "id": "r-2002",
+      "name": "Pretoria Pitmaster BBQ",
+      "cuisines": ["Barbecue", "American"],
+      "rating": 4.5,
+      "delivery_fee_cents": 1600,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2002/400/300"
+    },
+    {
+      "id": "r-2003",
+      "name": "Umhlanga Thai Express",
+      "cuisines": ["Thai", "Asian"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 24,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2003/400/300"
+    },
+    {
+      "id": "r-2004",
+      "name": "Clifton Beach Juice Bar",
+      "cuisines": ["Juice", "Smoothies", "Healthy"],
+      "rating": 4.6,
+      "delivery_fee_cents": 800,
+      "eta_minutes": 15,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2004/400/300"
+    },
+    {
+      "id": "r-2005",
+      "name": "Bloemfontein Boerewors House",
+      "cuisines": ["South African", "Fast Food"],
+      "rating": 4.2,
+      "delivery_fee_cents": 1000,
+      "eta_minutes": 20,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r2005/400/300"
+    },
+    {
+      "id": "r-2006",
+      "name": "Paarl Wine Estate Bistro",
+      "cuisines": ["Continental", "Wine Bar"],
+      "rating": 4.8,
+      "delivery_fee_cents": 2200,
+      "eta_minutes": 45,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2006/400/300"
+    },
+    {
+      "id": "r-2007",
+      "name": "Polokwane Peri-Peri Chicken",
+      "cuisines": ["Chicken", "Portuguese"],
+      "rating": 4.4,
+      "delivery_fee_cents": 1100,
+      "eta_minutes": 26,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2007/400/300"
+    },
+    {
+      "id": "r-2008",
+      "name": "Morningside Shawarma Den",
+      "cuisines": ["Middle Eastern", "Shawarma"],
+      "rating": 4.5,
+      "delivery_fee_cents": 900,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2008/400/300"
+    },
+    {
+      "id": "r-2009",
+      "name": "Sandton Sushi Lounge",
+      "cuisines": ["Sushi", "Japanese"],
+      "rating": 4.6,
+      "delivery_fee_cents": 2000,
+      "eta_minutes": 33,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2009/400/300"
+    },
+    {
+      "id": "r-2010",
+      "name": "Knysna Oyster Bar",
+      "cuisines": ["Seafood", "Gourmet"],
+      "rating": 4.9,
+      "delivery_fee_cents": 2500,
+      "eta_minutes": 40,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r2010/400/300"
+    },
+    {
+      "id": "r-2011",
+      "name": "Hout Bay Fish Market",
+      "cuisines": ["Seafood", "Fast Food"],
+      "rating": 4.1,
+      "delivery_fee_cents": 1300,
+      "eta_minutes": 28,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2011/400/300"
+    },
+    {
+      "id": "r-2012",
+      "name": "Rosebank Ramen House",
+      "cuisines": ["Japanese", "Ramen"],
+      "rating": 4.7,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 30,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2012/400/300"
+    },
+    {
+      "id": "r-2013",
+      "name": "Newlands Cricket Cafe",
+      "cuisines": ["Cafe", "Pub Food"],
+      "rating": 4.0,
+      "delivery_fee_cents": 1000,
+      "eta_minutes": 25,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2013/400/300"
+    },
+    {
+      "id": "r-2014",
+      "name": "Melville Vintage Diner",
+      "cuisines": ["American", "Burgers"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 27,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2014/400/300"
+    },
+    {
+      "id": "r-2015",
+      "name": "Ballito Bay Italian",
+      "cuisines": ["Italian", "Pasta"],
+      "rating": 4.6,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 36,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2015/400/300"
+    },
+    {
+      "id": "r-2016",
+      "name": "Kimberley Diamond Steakhouse",
+      "cuisines": ["Steakhouse", "Grill"],
+      "rating": 4.4,
+      "delivery_fee_cents": 1700,
+      "eta_minutes": 34,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r2016/400/300"
+    },
+    {
+      "id": "r-2017",
+      "name": "Century City Poke Bar",
+      "cuisines": ["Hawaiian", "Poke", "Healthy"],
+      "rating": 4.5,
+      "delivery_fee_cents": 1100,
+      "eta_minutes": 21,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2017/400/300"
+    },
+    {
+      "id": "r-2018",
+      "name": "Nelspruit Citrus Bakery",
+      "cuisines": ["Bakery", "Desserts"],
+      "rating": 4.2,
+      "delivery_fee_cents": 900,
+      "eta_minutes": 19,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2018/400/300"
+    },
+    {
+      "id": "r-2019",
+      "name": "East London Catch",
+      "cuisines": ["Seafood"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1400,
+      "eta_minutes": 31,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2019/400/300"
+    },
+    {
+      "id": "r-2020",
+      "name": "Hermanus Whale View Bistro",
+      "cuisines": ["Seafood", "Bistro"],
+      "rating": 4.8,
+      "delivery_fee_cents": 2100,
+      "eta_minutes": 39,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r2020/400/300"
+    }
+  ],
+  "page": 2,
+  "has_more_pages": true
+}

@@ -1,0 +1,206 @@
+{
+  "restaurants": [
+    {
+      "id": "r-5001",
+      "name": "Kirstenbosch Botanical Bistro",
+      "cuisines": ["Cafe", "Healthy"],
+      "rating": 4.8,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 30,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5001/400/300"
+    },
+    {
+      "id": "r-5002",
+      "name": "Eersterust Braai Spot",
+      "cuisines": ["South African", "Barbecue"],
+      "rating": 4.5,
+      "delivery_fee_cents": 1100,
+      "eta_minutes": 25,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5002/400/300"
+    },
+    {
+      "id": "r-5003",
+      "name": "Constantia Glen Kitchen",
+      "cuisines": ["Gourmet", "Wine Bar"],
+      "rating": 4.9,
+      "delivery_fee_cents": 2500,
+      "eta_minutes": 45,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5003/400/300"
+    },
+    {
+      "id": "r-5004",
+      "name": "Fish Hoek Beach Diner",
+      "cuisines": ["Seafood", "Burgers"],
+      "rating": 4.2,
+      "delivery_fee_cents": 1200,
+      "eta_minutes": 24,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5004/400/300"
+    },
+    {
+      "id": "r-5005",
+      "name": "Roodepoort Indian Cuisine",
+      "cuisines": ["Indian", "Curry"],
+      "rating": 4.4,
+      "delivery_fee_cents": 1300,
+      "eta_minutes": 28,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r5005/400/300"
+    },
+    {
+      "id": "r-5006",
+      "name": "Melkbosstrand Seafood Grill",
+      "cuisines": ["Seafood", "Grill"],
+      "rating": 4.6,
+      "delivery_fee_cents": 1700,
+      "eta_minutes": 36,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5006/400/300"
+    },
+    {
+      "id": "r-5007",
+      "name": "Northcliff Noodle House",
+      "cuisines": ["Asian", "Noodles"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1000,
+      "eta_minutes": 22,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5007/400/300"
+    },
+    {
+      "id": "r-5008",
+      "name": "Fresnaye Gourmet Pizza",
+      "cuisines": ["Italian", "Pizza"],
+      "rating": 4.7,
+      "delivery_fee_cents": 2000,
+      "eta_minutes": 38,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5008/400/300"
+    },
+    {
+      "id": "r-5009",
+      "name": "Parys River Cafe",
+      "cuisines": ["Cafe", "Desserts"],
+      "rating": 4.1,
+      "delivery_fee_cents": 900,
+      "eta_minutes": 20,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5009/400/300"
+    },
+    {
+      "id": "r-5010",
+      "name": "Klerksdorp Steakhouse",
+      "cuisines": ["Steakhouse", "Grill"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1400,
+      "eta_minutes": 31,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r5010/400/300"
+    },
+    {
+      "id": "r-5011",
+      "name": "Salt River Taco Stand",
+      "cuisines": ["Mexican", "Street Food"],
+      "rating": 4.5,
+      "delivery_fee_cents": 800,
+      "eta_minutes": 18,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5011/400/300"
+    },
+    {
+      "id": "r-5012",
+      "name": "Maitland Shawarma",
+      "cuisines": ["Middle Eastern", "Shawarma"],
+      "rating": 4.0,
+      "delivery_fee_cents": 900,
+      "eta_minutes": 21,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5012/400/300"
+    },
+    {
+      "id": "r-5013",
+      "name": "Oakhurst Farm Kitchen",
+      "cuisines": ["South African", "Breakfast"],
+      "rating": 4.6,
+      "delivery_fee_cents": 1300,
+      "eta_minutes": 27,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5013/400/300"
+    },
+    {
+      "id": "r-5014",
+      "name": "Signal Hill Taproom",
+      "cuisines": ["Pub Food", "Burgers"],
+      "rating": 4.4,
+      "delivery_fee_cents": 1500,
+      "eta_minutes": 32,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5014/400/300"
+    },
+    {
+      "id": "r-5015",
+      "name": "Stanford River Bistro",
+      "cuisines": ["Bistro", "Organic"],
+      "rating": 4.8,
+      "delivery_fee_cents": 1800,
+      "eta_minutes": 35,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5015/400/300"
+    },
+    {
+      "id": "r-5016",
+      "name": "Athlone Curry Express",
+      "cuisines": ["Cape Malay", "Curry"],
+      "rating": 4.5,
+      "delivery_fee_cents": 1000,
+      "eta_minutes": 22,
+      "is_open": false,
+      "image_url": "https://picsum.photos/seed/r5016/400/300"
+    },
+    {
+      "id": "r-5017",
+      "name": "Langebaan Lagoon Grill",
+      "cuisines": ["Seafood", "Grill"],
+      "rating": 4.7,
+      "delivery_fee_cents": 1900,
+      "eta_minutes": 40,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5017/400/300"
+    },
+    {
+      "id": "r-5018",
+      "name": "Vanderbijlpark Fish & Chips",
+      "cuisines": ["Seafood", "Fast Food"],
+      "rating": 4.1,
+      "delivery_fee_cents": 800,
+      "eta_minutes": 19,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5018/400/300"
+    },
+    {
+      "id": "r-5019",
+      "name": "Ceres Fruit & Pastry Cafe",
+      "cuisines": ["Bakery", "Cafe"],
+      "rating": 4.3,
+      "delivery_fee_cents": 1100,
+      "eta_minutes": 23,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5019/400/300"
+    },
+    {
+      "id": "r-5020",
+      "name": "Green Point Gourmet Burgers",
+      "cuisines": ["Burgers", "American"],
+      "rating": 4.9,
+      "delivery_fee_cents": 1600,
+      "eta_minutes": 29,
+      "is_open": true,
+      "image_url": "https://picsum.photos/seed/r5020/400/300"
+    }
+  ],
+  "page": 5,
+  "has_more_pages": false
+}

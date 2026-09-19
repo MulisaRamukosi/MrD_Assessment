@@ -1,0 +1,103 @@
+{
+  "restaurant_id": "r-1001",
+  "categories": [
+    {
+      "id": "c-10",
+      "name": "Starters",
+      "items": [
+        {
+          "id": "i-100",
+          "name": "Grilled Halloumi",
+          "price_cents": 6900,
+          "available": true,
+          "description": "Citrus glaze, micro herbs",
+          "image_url": "https://picsum.photos/seed/i100/300/200",
+          "options": [
+            {
+              "id": "o-1",
+              "name": "Extra lemon",
+              "price_cents": 500
+            }
+          ]
+        },
+        {
+          "id": "i-101",
+          "name": "Beef Carpaccio",
+          "price_cents": 8500,
+          "available": true,
+          "description": "Capers, parmesan shavings, rocket, truffle oil",
+          "image_url": "https://picsum.photos/seed/i101/300/200",
+          "options": [
+            {
+              "id": "o-2",
+              "name": "Extra parmesan",
+              "price_cents": 1200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c-20",
+      "name": "Mains",
+      "items": [
+        {
+          "id": "i-200",
+          "name": "Ribeye Steak 300g",
+          "price_cents": 24500,
+          "available": true,
+          "description": "Grain-fed beef, flame-grilled to preference, served with chips or salad",
+          "image_url": "https://picsum.photos/seed/i200/300/200",
+          "options": [
+            {
+              "id": "o-10",
+              "name": "Mushroom Sauce",
+              "price_cents": 2500
+            },
+            {
+              "id": "o-11",
+              "name": "Pepper Sauce",
+              "price_cents": 2500
+            }
+          ]
+        },
+        {
+          "id": "i-201",
+          "name": "Flame-Grilled Lamb Chops",
+          "price_cents": 22000,
+          "available": true,
+          "description": "Rosemary and garlic marinade, roast vegetables",
+          "image_url": "https://picsum.photos/seed/i201/300/200",
+          "options": [
+            {
+              "id": "o-12",
+              "name": "Mint Jelly",
+              "price_cents": 800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c-30",
+      "name": "Desserts",
+      "items": [
+        {
+          "id": "i-300",
+          "name": "Malva Pudding",
+          "price_cents": 6500,
+          "available": true,
+          "description": "Traditional warm apricot sponge pudding with custard and vanilla ice cream",
+          "image_url": "https://picsum.photos/seed/i300/300/200",
+          "options": [
+            {
+              "id": "o-20",
+              "name": "Extra Custard",
+              "price_cents": 1000
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

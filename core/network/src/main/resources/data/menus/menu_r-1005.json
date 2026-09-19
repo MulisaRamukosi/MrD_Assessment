@@ -1,0 +1,46 @@
+{
+  "restaurant_id": "r-1005",
+  "categories": [
+    {
+      "id": "c-1005-1",
+      "name": "Traditional Curries",
+      "items": [
+        {
+          "id": "i-1005-10",
+          "name": "Durban Mutton Bunny Chow",
+          "price_cents": 13500,
+          "available": true,
+          "description": "Half loaf of white bread filled with authentic slow-cooked spicy mutton curry",
+          "image_url": "https://picsum.photos/seed/curry1/300/200",
+          "options": [
+            {
+              "id": "o-1005-1",
+              "name": "Extra Sambals & Pickle",
+              "price_cents": 1000
+            },
+            {
+              "id": "o-1005-2",
+              "name": "Extra Gravy",
+              "price_cents": 800
+            }
+          ]
+        },
+        {
+          "id": "i-1005-11",
+          "name": "Butter Chicken Curry with Basmati Rice",
+          "price_cents": 12800,
+          "available": true,
+          "description": "Tender chicken breast pieces in a rich creamy tomato-butter sauce",
+          "image_url": "https://picsum.photos/seed/curry2/300/200",
+          "options": [
+            {
+              "id": "o-1005-3",
+              "name": "Garlic Naan Bread",
+              "price_cents": 2500
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

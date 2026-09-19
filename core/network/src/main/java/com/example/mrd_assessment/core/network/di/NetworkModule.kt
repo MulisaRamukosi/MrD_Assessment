@@ -1,9 +1,8 @@
 package com.example.mrd_assessment.core.network.di
 
+import com.example.mrd_assessment.core.network.api.MenuApiService
 import com.example.mrd_assessment.core.network.api.RestaurantApiService
-import com.example.mrd_assessment.core.network.repository.RestaurantRepository
-import com.example.mrd_assessment.core.network.repository.RetrofitRestaurantRepository
-import dagger.Binds
+import com.example.mrd_assessment.core.network.server.DataDispatcher
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,6 +11,7 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import okhttp3.mockwebserver.MockWebServer
 import retrofit2.Retrofit
 import retrofit2.converter.kotlinx.serialization.asConverterFactory
 import java.util.concurrent.TimeUnit
@@ -19,60 +19,66 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class NetworkModule {
+object NetworkModule {
 
-    @Binds
+    @Provides
     @Singleton
-    abstract fun bindRestaurantRepository(
-        impl: RetrofitRestaurantRepository
-    ): RestaurantRepository
+    fun provideMockWebServer(): MockWebServer {
+        val server = MockWebServer()
+        server.start()
+        server.dispatcher = DataDispatcher()
 
-    companion object {
-        private const val BASE_URL = "https://raw.githubusercontent.com/"
-
-        @Provides
-        @Singleton
-        fun provideJson(): Json = Json {
-            ignoreUnknownKeys = true
-            coerceInputValues = true
-            isLenient = true
-        }
-
-        @Provides
-        @Singleton
-        fun provideLoggingInterceptor(): HttpLoggingInterceptor =
-            HttpLoggingInterceptor().apply {
-                level = HttpLoggingInterceptor.Level.BODY
-            }
-
-        @Provides
-        @Singleton
-        fun provideOkHttpClient(
-            loggingInterceptor: HttpLoggingInterceptor
-        ): OkHttpClient = OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor)
-            .connectTimeout(30, TimeUnit.SECONDS)
-            .readTimeout(30, TimeUnit.SECONDS)
-            .build()
-
-        @Provides
-        @Singleton
-        fun provideRetrofit(
-            okHttpClient: OkHttpClient,
-            json: Json
-        ): Retrofit {
-
-            val contentType = "application/json".toMediaType()
-            return Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .client(okHttpClient)
-                .addConverterFactory(json.asConverterFactory(contentType))
-                .build()
-        }
-
-        @Provides
-        @Singleton
-        fun provideRestaurantApiService(retrofit: Retrofit): RestaurantApiService =
-            retrofit.create(RestaurantApiService::class.java)
+        return server
     }
+
+    @Provides
+    @Singleton
+    fun provideJson(): Json = Json {
+        ignoreUnknownKeys = true
+        coerceInputValues = true
+        isLenient = true
+    }
+
+    @Provides
+    @Singleton
+    fun provideLoggingInterceptor(): HttpLoggingInterceptor =
+        HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
+
+    @Provides
+    @Singleton
+    fun provideOkHttpClient(
+        loggingInterceptor: HttpLoggingInterceptor
+    ): OkHttpClient = OkHttpClient.Builder()
+        .addInterceptor(loggingInterceptor)
+        .connectTimeout(30, TimeUnit.SECONDS)
+        .readTimeout(30, TimeUnit.SECONDS)
+        .build()
+
+    @Provides
+    @Singleton
+    fun provideRetrofit(
+        mockWebServer: MockWebServer,
+        okHttpClient: OkHttpClient,
+        json: Json
+    ): Retrofit {
+        val serverUrl = mockWebServer.url("/").toString()
+
+        val contentType = "application/json".toMediaType()
+        return Retrofit.Builder()
+            .baseUrl(serverUrl)
+            .client(okHttpClient)
+            .addConverterFactory(json.asConverterFactory(contentType))
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideRestaurantApiService(retrofit: Retrofit): RestaurantApiService =
+        retrofit.create(RestaurantApiService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideMenuApiService(retrofit: Retrofit): MenuApiService = retrofit.create(MenuApiService::class.java)
 }

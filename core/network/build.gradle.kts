@@ -42,6 +42,8 @@ dependencies {
     implementation(libs.okhttp.core)
     implementation(libs.okhttp.logging)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.mockwebserver3)
+    implementation(libs.okhttp.mockwebserver)
 
     implementation(libs.androidx.core.ktx)
 }
