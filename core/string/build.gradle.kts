@@ -34,5 +34,9 @@ dependencies {
     implementation(libs.hilt.android)
     add("kapt", libs.hilt.compiler)
 
+    implementation(libs.deferred.resources)
+    implementation(libs.deferred.resources.view.extensions)
+    implementation(libs.deferred.resources.compose.adapter)
+
     implementation(libs.androidx.core.ktx)
 }

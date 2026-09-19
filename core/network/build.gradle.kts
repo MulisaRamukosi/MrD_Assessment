@@ -33,6 +33,7 @@ tasks.withType<KotlinCompile>().configureEach {
 
 dependencies {
     implementation(project(":model"))
+    implementation(project(":core:string"))
 
     implementation(libs.hilt.android)
     add("kapt", libs.hilt.compiler)
@@ -44,6 +45,10 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.mockwebserver3)
     implementation(libs.okhttp.mockwebserver)
+
+    implementation(libs.deferred.resources)
+    implementation(libs.deferred.resources.view.extensions)
+    implementation(libs.deferred.resources.compose.adapter)
 
     implementation(libs.androidx.core.ktx)
 }
