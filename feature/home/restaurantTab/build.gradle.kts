@@ -10,7 +10,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mrd_assessment.feature.home.home"
+    namespace = "com.example.mrd_assessment.feature.home.restauranttab"
     compileSdk {
         version = release(37)
     }
@@ -36,13 +36,10 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
-    implementation(project(":feature:home:restaurantTab"))
-    implementation(project(":feature:home:favouriteTab"))
-
     implementation(project(":core:ui"))
     implementation(project(":core:string"))
-    implementation(project(":core:navigation"))
     implementation(project(":model"))
+    implementation(project(":data:restaurant"))
 
     implementation(libs.hilt.android)
     add("kapt", libs.hilt.compiler)

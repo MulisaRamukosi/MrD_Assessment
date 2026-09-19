@@ -53,7 +53,6 @@ dependencies {
     implementation(project(":core:string"))
     implementation(project(":feature:home:home"))
     implementation(project(":feature:restaurant:detail"))
-    implementation(project(":feature:restaurant:favourite"))
 
     implementation(libs.hilt.android)
     add("kapt", libs.hilt.compiler)
