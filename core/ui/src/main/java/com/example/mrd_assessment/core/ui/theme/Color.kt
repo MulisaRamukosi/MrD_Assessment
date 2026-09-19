@@ -1,4 +1,4 @@
-package com.example.mrd_assessment.core.ui
+package com.example.mrd_assessment.core.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -51,7 +51,7 @@ dependencies {
     implementation(project(":core:ui"))
     implementation(project(":core:navigation"))
     implementation(project(":core:string"))
-    implementation(project(":feature:restaurant:list"))
+    implementation(project(":feature:home:home"))
     implementation(project(":feature:restaurant:detail"))
     implementation(project(":feature:restaurant:favourite"))
 

@@ -10,7 +10,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mrd_assessment.feature.restaurant.list"
+    namespace = "com.example.mrd_assessment.feature.home.listtab"
     compileSdk {
         version = release(37)
     }

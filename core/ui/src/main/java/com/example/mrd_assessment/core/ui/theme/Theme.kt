@@ -1,4 +1,4 @@
-package com.example.mrd_assessment.core.ui
+package com.example.mrd_assessment.core.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
