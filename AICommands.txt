@@ -1,0 +1,31 @@
+---
+You:
+I need to generate some modules for me
+
+:feature:restaurant:list
+:feature:restaurant:detail
+:feature:restaurant:favourite
+:data:restaurant
+:data:menu
+:core:ui
+:core:network
+:core:datastore
+:core:navigation
+:model
+
+This is how the dependency should be mapped out
+
+:app -> :core:ui
+:app -> core:navigation
+:app -> :feature:restaurant:list
+:app -> :feature:restaurant:detail
+:app -> :feature:restaurant:favourite
+:feature:restaurant:list & :feature:restaurant:favourite -> :data:restaurant
+:feature:restaurant:detail -> :data:menu
+
+all modules in :feature:* -> :core:ui, :model
+
+:data:restaurant -> :core:network & :core:datastore
+:data:menu -> :core:network
+
+:core:network -> :model
