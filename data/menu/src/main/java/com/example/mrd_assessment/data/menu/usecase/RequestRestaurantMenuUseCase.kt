@@ -1,5 +1,6 @@
 package com.example.mrd_assessment.data.menu.usecase
 
+import com.backbase.deferredresources.DeferredText
 import com.example.mrd_assessment.core.network.api.MenuApiService
 import com.example.mrd_assessment.core.network.model.RequestResult
 import com.example.mrd_assessment.model.Menu
@@ -16,7 +17,11 @@ internal class RequestRestaurantMenuUseCaseImpl
     override suspend fun invoke(restaurantId: String): RequestResult<Menu> {
         val result = menuApiService.getMenu(restaurantId = restaurantId)
 
-        TODO("Not yet implemented")
+        return if (result.isSuccessful) {
+            RequestResult(data = result.body())
+        } else {
+            RequestResult(message = DeferredText.Constant(result.errorBody()?.string() ?: ""))
+        }
     }
 
 }
