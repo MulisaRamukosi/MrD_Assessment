@@ -87,8 +87,8 @@ fun RestaurantTabScreen(
                         isFavourite = favouriteIds.contains(restaurant.id),
                         isLoadingFavouriteState = loadingFavouriteIds.contains(restaurant.id),
                         onRestaurantClick = onRestaurantClick,
-                        onSetFavouriteState = { restaurantId, isFav ->
-                            viewModel.setFavourite(restaurantId, isFav)
+                        onSetFavouriteState = { isFav ->
+                            viewModel.setFavourite(restaurant, isFav)
                         }
                     )
                 }

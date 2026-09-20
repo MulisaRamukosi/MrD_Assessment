@@ -1,10 +1,11 @@
-package com.example.mrd_assessment.core.datastore.db
+package com.example.mrd_assessment.core.datastore.db.dao
 
 import androidx.paging.PagingSource
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.mrd_assessment.core.datastore.db.entity.RestaurantEntity
 
 @Dao
 interface RestaurantDao {

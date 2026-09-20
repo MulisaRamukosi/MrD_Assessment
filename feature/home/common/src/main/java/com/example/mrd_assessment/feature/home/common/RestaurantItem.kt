@@ -42,7 +42,7 @@ fun RestaurantItem(
     isFavourite: Boolean,
     isLoadingFavouriteState: Boolean,
     onRestaurantClick: (String) -> Unit,
-    onSetFavouriteState: (String, Boolean) -> Unit
+    onSetFavouriteState: (Boolean) -> Unit
 ) {
     Card(modifier = modifier, onClick = { onRestaurantClick(restaurant.id) }) {
         Box(modifier = Modifier.fillMaxWidth()) {
@@ -64,7 +64,7 @@ fun RestaurantItem(
                 checked = isFavourite,
                 enabled = !isLoadingFavouriteState,
                 onCheckedChange = {
-                    onSetFavouriteState(restaurant.id, it)
+                    onSetFavouriteState(it)
                 },
                 modifier = Modifier.align(alignment = Alignment.TopEnd).padding(all = 4.dp)
             ) {
@@ -225,7 +225,7 @@ fun RestaurantItemDefaultPreview() {
             isFavourite = false,
             isLoadingFavouriteState = false,
             onRestaurantClick = {},
-            onSetFavouriteState = { _, _ -> }
+            onSetFavouriteState = { }
         )
     }
 }

@@ -1,5 +1,9 @@
 package com.example.mrd_assessment.data.restaurant.di
 
+import com.example.mrd_assessment.data.restaurant.usecase.GetFavouriteRestaurantIdsUseCase
+import com.example.mrd_assessment.data.restaurant.usecase.GetFavouriteRestaurantIdsUseCaseImpl
+import com.example.mrd_assessment.data.restaurant.usecase.GetFavouriteRestaurantsPagerUseCase
+import com.example.mrd_assessment.data.restaurant.usecase.GetFavouriteRestaurantsPagerUseCaseImpl
 import com.example.mrd_assessment.data.restaurant.usecase.GetRestaurantsPagerUseCase
 import com.example.mrd_assessment.data.restaurant.usecase.GetRestaurantsPagerUseCaseImpl
 import com.example.mrd_assessment.data.restaurant.usecase.RequestRestaurantUseCase
@@ -33,4 +37,16 @@ abstract class RestaurantDataModule {
     internal abstract fun bindGetRestaurantsPagerUseCase(
         impl: GetRestaurantsPagerUseCaseImpl
     ): GetRestaurantsPagerUseCase
+
+    @Binds
+    @Singleton
+    internal abstract fun bindGetFavouriteRestaurantIdsUseCase(
+        impl: GetFavouriteRestaurantIdsUseCaseImpl
+    ): GetFavouriteRestaurantIdsUseCase
+
+    @Binds
+    @Singleton
+    internal abstract fun bindGetFavouriteRestaurantsPagerUseCase(
+        impl: GetFavouriteRestaurantsPagerUseCaseImpl
+    ): GetFavouriteRestaurantsPagerUseCase
 }

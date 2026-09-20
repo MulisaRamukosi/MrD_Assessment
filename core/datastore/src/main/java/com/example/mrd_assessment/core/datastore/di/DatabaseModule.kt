@@ -2,8 +2,9 @@ package com.example.mrd_assessment.core.datastore.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.mrd_assessment.core.datastore.db.RestaurantDao
 import com.example.mrd_assessment.core.datastore.db.RestaurantDatabase
+import com.example.mrd_assessment.core.datastore.db.dao.FavouriteRestaurantDao
+import com.example.mrd_assessment.core.datastore.db.dao.RestaurantDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,11 +25,16 @@ object DatabaseModule {
             context,
             RestaurantDatabase::class.java,
             "restaurant_database"
-        ).build()
+        ).fallbackToDestructiveMigration(dropAllTables = true).build()
     }
 
     @Provides
     fun provideRestaurantDao(database: RestaurantDatabase): RestaurantDao {
         return database.restaurantDao()
+    }
+
+    @Provides
+    fun provideFavouriteRestaurantDao(database: RestaurantDatabase): FavouriteRestaurantDao {
+        return database.favouriteRestaurantDao()
     }
 }

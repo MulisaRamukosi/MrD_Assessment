@@ -1,4 +1,4 @@
-package com.example.mrd_assessment.core.datastore.db
+package com.example.mrd_assessment.core.datastore.db.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

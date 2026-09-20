@@ -6,10 +6,12 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.example.mrd_assessment.core.datastore.preferences.ScrollPosition
 import com.example.mrd_assessment.core.datastore.preferences.ScrollPositionPreferences
+import com.example.mrd_assessment.data.restaurant.usecase.GetFavouriteRestaurantIdsUseCase
 import com.example.mrd_assessment.data.restaurant.usecase.GetRestaurantsPagerUseCase
 import com.example.mrd_assessment.data.restaurant.usecase.SetRestaurantAsFavouriteUseCase
 import com.example.mrd_assessment.model.Restaurant
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -23,6 +25,7 @@ import javax.inject.Inject
 @HiltViewModel
 class RestaurantTabViewModel @Inject constructor(
     getRestaurantsPagerUseCase: GetRestaurantsPagerUseCase,
+    getFavouriteRestaurantIdsUseCase: GetFavouriteRestaurantIdsUseCase,
     private val setRestaurantAsFavouriteUseCase: SetRestaurantAsFavouriteUseCase,
     private val scrollPositionPreferences: ScrollPositionPreferences
 ) : ViewModel() {
@@ -37,8 +40,12 @@ class RestaurantTabViewModel @Inject constructor(
             initialValue = ScrollPosition()
         )
 
-    private val _favouriteRestaurantIds = MutableStateFlow<Set<String>>(emptySet())
-    val favouriteRestaurantIds: StateFlow<Set<String>> = _favouriteRestaurantIds.asStateFlow()
+    val favouriteRestaurantIds: StateFlow<Set<String>> = getFavouriteRestaurantIdsUseCase()
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = emptySet()
+        )
 
     private val _loadingFavouriteIds = MutableStateFlow<Set<String>>(emptySet())
     val loadingFavouriteIds: StateFlow<Set<String>> = _loadingFavouriteIds.asStateFlow()
@@ -49,19 +56,11 @@ class RestaurantTabViewModel @Inject constructor(
         }
     }
 
-    fun setFavourite(restaurantId: String, isFavourite: Boolean) {
-        viewModelScope.launch {
-            _loadingFavouriteIds.update { it + restaurantId }
-
-            val result = setRestaurantAsFavouriteUseCase(restaurantId)
-
-            if (!result.requestFailed()) {
-                _favouriteRestaurantIds.update { current ->
-                    if (isFavourite) current + restaurantId else current - restaurantId
-                }
-            }
-
-            _loadingFavouriteIds.update { it - restaurantId }
+    fun setFavourite(restaurant: Restaurant, isFavourite: Boolean){
+        viewModelScope.launch(context = Dispatchers.IO) {
+            _loadingFavouriteIds.update { it + restaurant.id }
+            setRestaurantAsFavouriteUseCase(restaurant, isFavourite)
+            _loadingFavouriteIds.update { it - restaurant.id }
         }
     }
 

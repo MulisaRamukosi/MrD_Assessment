@@ -6,9 +6,9 @@ import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
 import com.example.mrd_assessment.core.datastore.db.RestaurantDatabase
-import com.example.mrd_assessment.core.datastore.db.RestaurantEntity
-import com.example.mrd_assessment.core.datastore.db.RestaurantRemoteKeyEntity
-import com.example.mrd_assessment.core.datastore.db.toEntity
+import com.example.mrd_assessment.core.datastore.db.entity.RestaurantEntity
+import com.example.mrd_assessment.core.datastore.db.entity.RestaurantRemoteKeyEntity
+import com.example.mrd_assessment.core.datastore.db.entity.toRestaurantEntity
 import com.example.mrd_assessment.core.datastore.preferences.ScrollPositionPreferences
 import com.example.mrd_assessment.data.restaurant.usecase.RequestRestaurantUseCase
 import java.util.concurrent.TimeUnit
@@ -89,7 +89,7 @@ class RestaurantRemoteMediator(
             }
 
             database.remoteKeysDao().insertAll(keys)
-            database.restaurantDao().insertAll(restaurants.map { it.toEntity() })
+            database.restaurantDao().insertAll(restaurants.map { it.toRestaurantEntity() })
         }
 
         return MediatorResult.Success(endOfPaginationReached = endOfPaginationReached)

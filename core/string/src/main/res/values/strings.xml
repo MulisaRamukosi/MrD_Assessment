@@ -16,4 +16,5 @@
         <item quantity="other">%1$d options</item>
     </plurals>
     <string name="restaurant_detail_no_menu_msg">No menu available</string>
+    <string name="favourite_no_items_msg">No favourite restaurants added yet</string>
 </resources>

@@ -6,7 +6,6 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.map
 import com.example.mrd_assessment.core.datastore.db.RestaurantDatabase
-import com.example.mrd_assessment.core.datastore.db.toDomainModel
 import com.example.mrd_assessment.core.datastore.preferences.ScrollPositionPreferences
 import com.example.mrd_assessment.data.restaurant.mediator.RestaurantRemoteMediator
 import com.example.mrd_assessment.model.Restaurant
