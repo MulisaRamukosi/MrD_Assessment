@@ -19,6 +19,7 @@ dependencyResolutionManagement {
 rootProject.name = "MrD_Assessment"
 include(":app")
 include(":feature:home:home")
+include(":feature:home:common")
 include(":feature:home:restaurantTab")
 include(":feature:home:favouriteTab")
 include(":feature:restaurant:detail")

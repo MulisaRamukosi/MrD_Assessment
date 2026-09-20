@@ -36,6 +36,7 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
+    implementation(project(":feature:home:common"))
     implementation(project(":core:ui"))
     implementation(project(":core:string"))
     implementation(project(":model"))
