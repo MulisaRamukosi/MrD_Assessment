@@ -42,6 +42,7 @@ dependencies {
     implementation(project(":core:network"))
     implementation(project(":model"))
     implementation(project(":data:restaurant"))
+    implementation(project(":core:datastore"))
 
     implementation(libs.hilt.android)
     add("kapt", libs.hilt.compiler)

@@ -15,8 +15,13 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -27,6 +32,7 @@ import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemKey
 import com.example.mrd_assessment.feature.home.common.RestaurantItem
+import kotlinx.coroutines.flow.distinctUntilChanged
 import com.example.mrd_assessment.core.string.R as StringR
 
 @Composable
@@ -39,6 +45,28 @@ fun RestaurantTabScreen(
     val lazyPagingItems = viewModel.restaurantsPagingData.collectAsLazyPagingItems()
     val favouriteIds by viewModel.favouriteRestaurantIds.collectAsState()
     val loadingFavouriteIds by viewModel.loadingFavouriteIds.collectAsState()
+    val scrollPosition by viewModel.scrollPosition.collectAsState()
+
+    var isScrollRestored by rememberSaveable { mutableStateOf(false) }
+
+    LaunchedEffect(lazyPagingItems.itemCount) {
+        if (!isScrollRestored && lazyPagingItems.itemCount > 0) {
+            if (scrollPosition.index < lazyPagingItems.itemCount) {
+                lazyListState.scrollToItem(scrollPosition.index, scrollPosition.offset)
+            }
+            isScrollRestored = true
+        }
+    }
+
+    LaunchedEffect(lazyListState) {
+        snapshotFlow { lazyListState.firstVisibleItemIndex to lazyListState.firstVisibleItemScrollOffset }
+            .distinctUntilChanged()
+            .collect { (index, offset) ->
+                if (isScrollRestored) {
+                    viewModel.saveScrollPosition(index, offset)
+                }
+            }
+    }
 
     Box(modifier = modifier.fillMaxSize()) {
         LazyColumn(

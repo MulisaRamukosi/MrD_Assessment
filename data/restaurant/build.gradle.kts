@@ -47,4 +47,10 @@ dependencies {
     implementation(libs.deferred.resources.compose.adapter)
 
     implementation(libs.androidx.core.ktx)
+
+    implementation(libs.androidx.paging.common)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.paging)
+    add("kapt", libs.androidx.room.compiler)
 }
