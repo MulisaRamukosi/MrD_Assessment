@@ -14,13 +14,6 @@ class MrDApplication : Application() {
     @Inject
     lateinit var mockWebServer: MockWebServer
 
-    override fun onCreate() {
-        super.onCreate()
-        CoroutineScope(Dispatchers.IO).launch {
-            //runCatching { mockWebServer.start() }
-        }
-    }
-
     override fun onTerminate() {
         super.onTerminate()
         CoroutineScope(Dispatchers.IO).launch {

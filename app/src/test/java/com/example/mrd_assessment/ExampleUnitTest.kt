@@ -1,17 +1,15 @@
 package com.example.mrd_assessment
 
+import androidx.navigation.navDeepLink
+import com.example.mrd_assessment.core.navigation.RestaurantDetailRoute
+import org.junit.Assert.*
 import org.junit.Test
 
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun deepLink_isCorrect() {
+        val deepLink = navDeepLink<RestaurantDetailRoute>(basePath = "mrd://restaurants")
+        println("Generated uriPattern: ${deepLink.uriPattern}")
+        assertNotNull(deepLink.uriPattern)
     }
 }
