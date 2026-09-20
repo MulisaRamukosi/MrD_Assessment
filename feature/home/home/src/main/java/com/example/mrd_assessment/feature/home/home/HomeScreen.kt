@@ -6,7 +6,8 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun HomeScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onRestaurantClick: (String) -> Unit = {}
 ) {
     Text(
         text = "Home Screen",

@@ -14,6 +14,8 @@ mockwebserver3 = "5.5.0"
 retrofit = "2.11.0"
 okhttp = "4.12.0"
 deferredResources = "1.6.1"
+navigationCompose = "2.8.8"
+hiltNavigationCompose = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,6 +44,8 @@ okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",
 deferred-resources = { group = "com.backbase.oss.deferredresources", name = "deferred-resources", version.ref = "deferredResources" }
 deferred-resources-view-extensions = { group = "com.backbase.oss.deferredresources", name = "deferred-resources-view-extensions", version.ref = "deferredResources" }
 deferred-resources-compose-adapter = { group = "com.backbase.oss.deferredresources", name = "deferred-resources-compose-adapter", version.ref = "deferredResources" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
