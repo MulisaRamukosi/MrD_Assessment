@@ -6,7 +6,14 @@
     <string name="common_closed">Closed</string>
     <string name="common_network_error_msg">An error occurred while making the network request</string>
     <string name="common_try_again">Try again</string>
+    <string name="common_unavailable">Unavailable</string>
     <string name="frmt_delivery_info">%1$s, %2$s minutes</string>
     <string name="home_restaurant_tab_title">Restaurants</string>
     <string name="home_favourites_tab_title">Favourites</string>
+    <string name="restaurant_detail_title">Menu</string>
+    <plurals name="restaurant_detail_screen_options">
+        <item quantity="one">%1$d option</item>
+        <item quantity="other">%1$d options</item>
+    </plurals>
+    <string name="restaurant_detail_no_menu_msg">No menu available</string>
 </resources>

@@ -24,7 +24,7 @@
           "id": "i-101",
           "name": "Beef Carpaccio",
           "price_cents": 8500,
-          "available": true,
+          "available": false,
           "description": "Capers, parmesan shavings, rocket, truffle oil",
           "image_url": "https://picsum.photos/seed/i101/300/200",
           "options": [
@@ -65,7 +65,7 @@
           "id": "i-201",
           "name": "Flame-Grilled Lamb Chops",
           "price_cents": 22000,
-          "available": true,
+          "available": false,
           "description": "Rosemary and garlic marinade, roast vegetables",
           "image_url": "https://picsum.photos/seed/i201/300/200",
           "options": [

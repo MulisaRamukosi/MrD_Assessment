@@ -2,6 +2,7 @@ package com.example.mrd_assessment.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import java.util.Locale
 
 @Serializable
 data class Menu(
@@ -9,7 +10,14 @@ data class Menu(
     val restaurantId: String,
     @SerialName("categories")
     val categories: List<Category>
-)
+) {
+    companion object {
+        val EMPTY = Menu(
+            restaurantId = "",
+            categories = emptyList()
+        )
+    }
+}
 
 @Serializable
 data class Category(
@@ -37,7 +45,16 @@ data class Item(
     val imageUrl: String?,
     @SerialName("options")
     val options: List<Option>
-)
+) {
+    val formattedPrice: String
+        get() {
+            val rands = (priceCents?.toFloat() ?: 0f) / 100
+
+
+            return "R%.2f".format(Locale.getDefault(), rands)
+        }
+
+}
 
 @Serializable
 data class Option(

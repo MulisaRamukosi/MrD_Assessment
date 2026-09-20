@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -18,6 +19,7 @@ import com.example.mrd_assessment.core.navigation.RestaurantDetailRoute
 import com.example.mrd_assessment.core.ui.theme.MrD_AssessmentTheme
 import com.example.mrd_assessment.feature.home.home.HomeScreen
 import com.example.mrd_assessment.feature.restaurant.detail.RestaurantDetailScreen
+import com.example.mrd_assessment.feature.restaurant.detail.RestaurantDetailScreenVM
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -60,9 +62,12 @@ fun AppNavHost(
 
         composable<RestaurantDetailRoute> { backStackEntry ->
             val route: RestaurantDetailRoute = backStackEntry.toRoute()
+
             RestaurantDetailScreen(
                 modifier = Modifier.fillMaxSize(),
-                restaurantId = route.restaurantId,
+                viewModel = hiltViewModel<RestaurantDetailScreenVM, RestaurantDetailScreenVM.Factory> { factory ->
+                    factory.create(route.restaurantId)
+                },
                 onBackClick = {
                     navController.popBackStack()
                 }

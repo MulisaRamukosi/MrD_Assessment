@@ -9,7 +9,7 @@
           "id": "i-1002-1",
           "name": "Salmon Salmon California Roll (8pcs)",
           "price_cents": 11000,
-          "available": true,
+          "available": false,
           "description": "Fresh Atlantic salmon, avocado, cucumber, sesame seeds",
           "image_url": "https://picsum.photos/seed/sushi1/300/200",
           "options": [
@@ -29,7 +29,7 @@
           "id": "i-1002-2",
           "name": "Tuna Crunch Roll (8pcs)",
           "price_cents": 12500,
-          "available": true,
+          "available": false,
           "description": "Spicy tuna, tempura flakes, sweet soy glaze",
           "image_url": "https://picsum.photos/seed/sushi2/300/200",
           "options": [
