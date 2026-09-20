@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MrD_Assessment</string>
+    <string name="common_free">Free</string>
+    <string name="common_open">Open</string>
+    <string name="common_closed">Closed</string>
+    <string name="common_network_error_msg">An error occurred while making the network request</string>
+    <string name="common_try_again">Try again</string>
+    <string name="frmt_delivery_info">%1$s, %2$s minutes</string>
+    <string name="home_restaurant_tab_title">Restaurants</string>
+    <string name="home_favourites_tab_title">Favourites</string>
 </resources>

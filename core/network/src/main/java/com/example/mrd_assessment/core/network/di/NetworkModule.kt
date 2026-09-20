@@ -7,6 +7,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -25,7 +27,6 @@ object NetworkModule {
     @Singleton
     fun provideMockWebServer(): MockWebServer {
         val server = MockWebServer()
-        server.start()
         server.dispatcher = DataDispatcher()
 
         return server
@@ -63,7 +64,10 @@ object NetworkModule {
         okHttpClient: OkHttpClient,
         json: Json
     ): Retrofit {
-        val serverUrl = mockWebServer.url("/").toString()
+        val serverUrl = runBlocking(Dispatchers.IO) {
+            runCatching { mockWebServer.start() }
+            mockWebServer.url("/").toString()
+        }
 
         val contentType = "application/json".toMediaType()
         return Retrofit.Builder()

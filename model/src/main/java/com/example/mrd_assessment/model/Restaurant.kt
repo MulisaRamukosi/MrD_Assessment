@@ -20,5 +20,6 @@ data class Restaurant(
     @SerialName("is_open")
     val isOpen: Boolean?,
     @SerialName("image_url")
-    val imageUrl: String?
-)
+    val imageUrl: String?,
+) {
+}

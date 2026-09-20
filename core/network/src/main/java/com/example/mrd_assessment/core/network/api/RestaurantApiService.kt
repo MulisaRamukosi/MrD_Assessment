@@ -5,20 +5,19 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import retrofit2.Response
 import retrofit2.http.Body
-import retrofit2.http.GET
 import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.Path
 
 interface RestaurantApiService {
 
-    @GET("v1/restaurants")
+    @POST("v1/restaurants")
     suspend fun getRestaurants(
         @Body request: GetRestaurantRequest
     ): Response<GetRestaurantResponse>
 
 
     @POST("v1/restaurants/{id}/favourite")
-    suspend fun markRestaurantAsFavourite(@Query("id") restaurantId: String): Response<Boolean>
+    suspend fun markRestaurantAsFavourite(@Path("id") restaurantId: String): Response<Boolean>
 }
 
 @Serializable

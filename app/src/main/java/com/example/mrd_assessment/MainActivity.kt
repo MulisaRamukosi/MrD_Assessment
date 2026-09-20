@@ -5,8 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -28,11 +27,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MrD_AssessmentTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Surface(modifier = Modifier.fillMaxSize()) {
                     val navController = rememberNavController()
                     AppNavHost(
+                        modifier = Modifier.fillMaxSize(),
                         navController = navController,
-                        modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
@@ -52,8 +51,9 @@ fun AppNavHost(
     ) {
         composable<HomeRoute> {
             HomeScreen(
+                modifier = Modifier.fillMaxSize(),
                 onRestaurantClick = { restaurantId ->
-                    navController.navigate(RestaurantDetailRoute(restaurantId = restaurantId))
+                    navController.navigate(route = RestaurantDetailRoute(restaurantId = restaurantId))
                 }
             )
         }
@@ -61,6 +61,7 @@ fun AppNavHost(
         composable<RestaurantDetailRoute> { backStackEntry ->
             val route: RestaurantDetailRoute = backStackEntry.toRoute()
             RestaurantDetailScreen(
+                modifier = Modifier.fillMaxSize(),
                 restaurantId = route.restaurantId,
                 onBackClick = {
                     navController.popBackStack()

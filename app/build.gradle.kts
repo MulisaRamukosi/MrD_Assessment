@@ -52,8 +52,11 @@ dependencies {
     implementation(project(":core:ui"))
     implementation(project(":core:navigation"))
     implementation(project(":core:string"))
+    implementation(project(":core:network"))
     implementation(project(":feature:home:home"))
     implementation(project(":feature:restaurant:detail"))
+
+    implementation(libs.okhttp.mockwebserver)
 
     implementation(libs.hilt.android)
     add("kapt", libs.hilt.compiler)

@@ -6,7 +6,8 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun RestaurantFavouriteTabScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onRestaurantClick: (String) -> Unit = {}
 ) {
     Text(
         text = "Restaurant Favourite Tab",
